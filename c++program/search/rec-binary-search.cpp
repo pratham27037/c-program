@@ -2,8 +2,18 @@
 
 using namespace std;
 
-int binarySearch(int arr[],int n,int x){
+int binarySearch(int arr[],int low,int high,int x){
     
+    if(low>high) return -1;
+
+    int mid=(low+high)/2;
+
+    if(arr[mid]==x) return mid;
+    else if(arr[mid] > x){
+        return binarySearch(arr,low,mid-1,x);
+    }else{
+        return binarySearch(arr,mid+1,high,x);
+    }
 }
 
 int main(){
@@ -17,7 +27,7 @@ int main(){
     }
     cout<<"enter element to search: ";
     cin>>x;
-    int index = binarySearch(arr,n,x);
+    int index = binarySearch(arr,0,n,x);
     if(index == -1){
         cout<<"element not found";
     }else{
