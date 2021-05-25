@@ -1,3 +1,4 @@
+//58A - Chat room
 #include<bits/stdc++.h>
 
 using namespace std;
@@ -7,19 +8,17 @@ int main(){
     cin>>s;
     string k = "hello";
     int j=0;
-    bool istrue = true;
+    int count=0;//count of word hello
     for(int i=0;i<s.length();i++){
         if(s[i] == k[j]){
             j++;
-            istrue = true;
-        }
-        else{
-            if(s[i] == k[j+1]){
-                istrue=false;
-            }
-        }
+            count++;
+            if(count == 5){//means all characters are prenent in order
+                break;//come out of the loop
+            }            
+        }    
     }
-    if(istrue){
+    if(count == 5){
         cout<<"YES";
     }
     else{
