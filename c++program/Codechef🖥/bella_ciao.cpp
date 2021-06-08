@@ -45,19 +45,19 @@ using namespace std;
 //notcompleted yet
 
 int main(){
-    int T;
+    long long int T;
     cin>>T;
     while(T){
-        int D,d,P,Q;
-        int amount=0;
+        long long int D,d,P,Q;
+        long long int amount=0;
         cin>>D>>d>>P>>Q;
-        int k=D/d;
-        if(d==1){
-           amount = amount + ((D/2)*(2*P + (D-1)*1)); 
+        long long int k=D/d;
+        if(k%2==0){
+           amount = amount + d*((k/2)*(2*P +(k-1)*Q)); 
         }else{
-            amount = amount + k*((k/2)*(2*P +(k-1)*Q));
-            amount = amount + (D%d)*(P+(k*Q));
+            amount = amount + d* ( k*(P +((k-1)/2)*Q));
         }
+        amount = amount + (D%d)*(P+(k*Q));
         cout<<amount<<endl;
         T--;
     }
