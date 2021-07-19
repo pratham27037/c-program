@@ -11,9 +11,6 @@ int main(){
         arr[i]=i;
         arr[i] = arr[i]*5;
     }
-    // for(int i=1;i<=n;i++){
-    //     cout<<arr[i];
-    // }
     int count=0;
     int check=k;
     for(int i=1;i<=n;i++){
@@ -24,9 +21,6 @@ int main(){
             }
             count++;
         }
-        // }else{
-        //     break;
-        // }
     }
     cout<<count<<endl;
     return 0;
