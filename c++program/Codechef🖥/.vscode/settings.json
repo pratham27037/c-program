@@ -1,9 +1,7 @@
 {
     "files.associations": {
         "*.cpp": "cpp",
-        "cmath": "cpp",
         "iostream": "cpp",
-        "random": "cpp",
-        "ostream": "cpp"
+        "valarray": "cpp"
     }
 }
